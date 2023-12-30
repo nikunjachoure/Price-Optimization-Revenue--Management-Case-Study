@@ -85,13 +85,13 @@ To estimate an expected revenue maximizing price, I first calculated the Bid Res
 
 Since I am looking for a single price per person in this analysis, I focused only on the Quote and Win columns. I fit the logit model with the given data and calculated the Probability(Win) and Probability(Loss) to calculate the Maximum Likelihood estimation of winning. Then I assumed an arbitrary starting value of decision variables a and b, and created and solved the following Solver model to maximize ln(likelihood) with constraints: **a <= 0**; **b >= 0**.
 
-Image 1
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%201.png?raw=true)
 
 I then used the obtained values of **a = -4.24**, **b = 0.033**, and **W(p)** to maximize our objective:
 
 ```Expected Revenue of a bid at Price p = (Contract Revenue at p conditional on winning) x W(p)```
 
-Image 2
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%202.png?raw=true)
 
 I got the optimal single price **p* = $101.99** per person, and the **Exp. Revenue per transaction = $3589.12**.
 
@@ -101,7 +101,7 @@ I got the optimal single price **p* = $101.99** per person, and the **Exp. Reven
 
 In the methodology explained in (a), I determined the optimal price per person. Then I expanded on the model:
 
-Image 3
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%203.png?raw=true)
 
 The calculated total expected revenue was **$25,680,126.80** compared to revenue of **$16,927,650** in 2007.
 This shows a difference of **$8,752,476.80** this year compared to the revenue earned by Copa in 2007.
@@ -121,27 +121,27 @@ This shows a difference of **$8,752,476.80** this year compared to the revenue e
 
 For each segmentation we calculated a and b by maximizing ln(likelihood). The solver models looked like:
 
-Image 
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%204.png?raw=true)
 
 Using the calculated value of W(p), we solved for price and expected revenue values for each of the segments.
 
 Total maximum expected revenue for segmentation by location was **$25,676,045.85**
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%205.png?raw=true)
 
 Total maximum expected revenue for segmentation by event type was **$25,697,511.83**
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%206.png?raw=true)
 
 Similarly for segmentation by event type at a specific location, we created 30 different products.
 
 This segmentation gave the maximum expected revenue of **$25,700,333.82**.
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%207.png?raw=true)
 
 To make prices consumer-friendly, we rounded the price to the nearest integers. This gave us an expected revenue of **$25,700,005.69**
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%208.png?raw=true)
 
 #### (c) What is the annual expected revenue for Copa for each segment? (Considering the transactions corresponding to each of your segments in the data file, you can determine how much revenue Copa would earn in each segment.) How does the expected annual revenue of Copa compare to total revenues in 2007 if optimal price for each segment was used.
 
@@ -153,12 +153,12 @@ Total Annual Expected Revenue = **$25,700,005**
 
 The Annual Expected revenue for Copa for each segment is given below:
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/Price-Optimization-Revenue-Management-Case-Study/blob/main/Image%209.png?raw=true)
 
 Copa makes additional revenue of **$8,772,355.69** if the optimal prices (rounded) for each segment were used,
 compared to the total revenue in 2007, and **$19,878.89** more than the increase in revenue if a single ppp is used.
 
-### Next Steps
+## Next Steps
 
 More exploration can be done to enhance the accuracy of the optimal prices, segmentation and revenue management. Some ways in which the problem statement can be modified are
 
